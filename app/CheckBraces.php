@@ -8,7 +8,7 @@
  *
  * @return bool
  */
-function checkBracketsBalance(string $inputString, array $bracketMap = null)
+function checkBracketsBalance(string $inputString, array $bracketMap = null) : bool 
 {
     $bracketMap = $bracketMap ?: ['(' => ')'];
     $bracketMapFlipped = array_flip($bracketMap);

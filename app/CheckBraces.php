@@ -8,7 +8,7 @@
  *
  * @return bool
  */
-function checkBracketsBalance(string $inputString, array $bracketMap = null) : bool 
+function checkBracketsBalance(string $inputString, array $bracketMap = null) : bool
 {
     $bracketMap = $bracketMap ?: ['(' => ')'];
     $bracketMapFlipped = array_flip($bracketMap);
@@ -20,7 +20,7 @@ function checkBracketsBalance(string $inputString, array $bracketMap = null) : b
     for ($i = 0; $i < $stringLength; $i++) {
         $currentChar = $inputString[$i];
 
-        if (isset($bracket_map[$currentChar])) {
+        if (isset($bracketMap[$currentChar])) {
             $bracketsStack[] = $bracketMap[$currentChar];
         } else if (isset($bracketMapFlipped[$currentChar])) {
             $expected = array_pop($bracketsStack);
@@ -37,6 +37,8 @@ $strings = [
     '()()(()',
     '(())()(()))',
     '(())(())()',
+    '(())(())()',
+    ')(())(())()',
     'toto',
     'you win ! ()'
 ];

@@ -17,7 +17,7 @@ function reverseWord(string $inputString, string $delimiter = ' ') : string
         array_push($finalWordsArray, strrev($word));
     }
 
-    return implode(' ', $finalWordsArray);
+    return implode($delimiter, $finalWordsArray);
 }
 
 // use cases

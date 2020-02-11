@@ -10,10 +10,10 @@
  */
 function reverseWord(string $inputString, string $delimiter = ' ') : string
 {
-    // we accept that input string contains a space character between each word
+    $initialArray = explode($delimiter, $inputString);
     $finalWordsArray = [];
 
-    foreach (explode($delimiter, $inputString) as $word) {
+    foreach ($initialArray as $word) {
         array_push($finalWordsArray, strrev($word));
     }
 

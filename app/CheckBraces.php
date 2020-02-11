@@ -8,9 +8,8 @@
  *
  * @return bool
  */
-function checkBracketsBalance(string $inputString, array $bracketMap = null) : bool
+function checkBracketsBalance(string $inputString, array $bracketMap = ['(' => ')']) : bool
 {
-    $bracketMap = $bracketMap ?: ['(' => ')'];
     $bracketMapFlipped = array_flip($bracketMap);
 
     $stringLength = strlen($inputString); // only for performance
@@ -40,7 +39,8 @@ $strings = [
     '(())(())()',
     ')(())(())()',
     'toto',
-    'you win ! ()'
+    'you win ! ()',
+    '',
 ];
 
 foreach ($strings as $string) {

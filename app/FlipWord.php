@@ -24,6 +24,7 @@ function reverseWord(string $inputString, string $delimiter = ' ') : string
 $strings = [
     'Hello World !',
     'Bad Game !',
+    '',
 ];
 
 foreach ($strings as $string) {

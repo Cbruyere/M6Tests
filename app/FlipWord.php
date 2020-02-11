@@ -10,10 +10,10 @@
  */
 function reverseWord(string $inputString, string $delimiter = ' ') : string
 {
-    $initialArray = array_filter(explode($delimiter, $inputString), 'strlen');
+    $initialWordsArray = array_filter(explode($delimiter, $inputString), 'strlen');
     $finalWordsArray = [];
 
-    foreach ($initialArray as $word) {
+    foreach ($initialWordsArray as $word) {
         array_push($finalWordsArray, strrev($word));
     }
 
